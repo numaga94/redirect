@@ -13,8 +13,8 @@ func main() {
 	app.Use(cache.New())
 
 	app.Get("/ski-tignes-2021", func(c *fiber.Ctx) error {
-		return c.Redirect("https://forms.gle/Vxd7CrhR8B1j9eEu7", 301)
+		return c.Redirect("https://docs.google.com/forms/d/e/1FAIpQLSdK43WI3EH-9WinmF_CRRe8LHCmwuuH2yuGvYyCvwMEo1Ed0w/viewform", 301)
 	})
 
-	app.Listen(":9000")
+	app.Listen(":8005")
 }
