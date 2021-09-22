@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  uparis-redirect-links:
+    build: .
+    image: numaga/lepetitprice:uparis-redirect-links_v1
+    container_name: uparis-redirect-links
+    environment:
+      VIRTUAL_HOST: ${VIRTUAL_HOST}
+      LETSENCRYPT_HOST: ${LETSENCRYPT_HOST}
+      LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
+    restart: always
+
+networks:
+  default:
+    external:
+      name: webproxy
